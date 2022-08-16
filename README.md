@@ -1,3 +1,3 @@
 # note
 学习笔记
-记录所有计算器知识
+python+mysql+github
