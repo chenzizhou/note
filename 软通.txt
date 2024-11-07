@@ -1,0 +1,7 @@
+W3：http://w3.huawei.com/next/indexa.html
+IPSA：http://ipsapro.isoftstone.com/portal
+CIDA:http://100.100.135.169:8080/CIDA/login.jsp
+DTS:https://dts-szv.clouddragon.huawei.com/DTSPortal/workspace
+测试者桌面：http://tmp.rnd.huawei.com/CituTestDeskCommon/
+外包工时系统：http://w3.huawei.com/rndohs/#/components/outsource/commUser/CommUserList
+ICan:https://ipsapro.isoftstone.com/iCan/#/login
