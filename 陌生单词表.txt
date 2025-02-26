@@ -1,0 +1,4 @@
+devOps  development $ operations  开发和运营
+CI/CD   continuous integration and continuous delivery   持续集成和持续交付
+aufs Advanced Multi-Layer Unification Filesystem 高级多层统一文件系统
+LTS  long term support  
