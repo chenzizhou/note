@@ -1,4 +1,11 @@
 devOps  development $ operations  开发和运营
 CI/CD   continuous integration and continuous delivery   持续集成和持续交付
 aufs Advanced Multi-Layer Unification Filesystem 高级多层统一文件系统
-LTS  long term support  
+LTS  long term support  长期维护
+daemon 守护进程
+VHD virtual hard disk 虚拟硬盘文件格式
+vswitch  虚拟交换机
+DNS domain name system 域名系统
+subnet 子网
+mask 掩码
+
