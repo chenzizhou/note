@@ -8,4 +8,5 @@ vswitch  虚拟交换机
 DNS domain name system 域名系统
 subnet 子网
 mask 掩码
+latest 最新的
 
