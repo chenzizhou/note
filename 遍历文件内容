@@ -1,0 +1,32 @@
+import os
+
+
+def get_file_list(root_dir):
+    list = [dir for dir in os.listdir(path=root_dir) if
+            dir not in ['camping_mode', 'ExhibitionMode', 'RaceMode', 'smart_scenes']]
+    for file in list:
+        sub_dir = os.path.join(root_dir, file)
+        if file.endswith('.py'):
+            file_list.append(file)
+            detail_file_list.append(sub_dir)
+        elif os.path.isdir(sub_dir):
+            get_file_list(sub_dir)
+
+
+file_list = []
+detail_file_list = []
+root_dir = r'D:\Local\DeviceTest\AutoFunction\script\SmartTravel\situational_intelligence'
+get_file_list(root_dir)
+list1 = [
+    'Car_CDC_SceneMode_CabinComfort_PetMode_1100',
+    'Car_CDC_SceneMode_CabinComfort_PetMode_0900',
+    'Car_CDC_SceneMode_CabinComfort_PetMode_3600',
+]
+last_list = []
+for file in list1:
+    file = file + '.py'
+    if file in file_list:
+        last_list.append(detail_file_list[file_list.index(file)])
+for file in last_list:
+    file = file.replace('D:\Local\DeviceTest\AutoFunction', '')
+    print(file)
