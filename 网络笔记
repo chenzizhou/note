@@ -1,0 +1,24 @@
+用cmd改网络的ip和物理地址;会清空其他ip
+netsh interface ip set address "以太网 4" static 192.168.62.14 255.255.255.0 192.168.62.1
+获取当前IP地址和子网掩码
+ipconfig /all
+获取物理地址
+getmac /fo list
+删除特定IP地址
+netsh interface ip delete address "以太网" 192.168.62.2
+添加地址
+netsh interface ip add address "以太网 4" 192.168.62.2 255.255.255.0
+netsh interface ip add address "以太网 4" 192.168.62.3 255.255.255.0
+netsh interface ip add address "以太网 4" 192.168.62.7 255.255.255.0
+netsh interface ip add address "以太网 4" 192.168.62.9 255.255.255.0
+netsh interface ip add address "以太网 4" 192.168.62.10 255.255.255.0
+netsh interface ip add address "以太网 4" 192.168.62.11 255.255.255.0
+netsh interface ip add address "以太网 4" 192.168.62.12 255.255.255.0
+netsh interface ip add address "以太网 4" 192.168.62.13 255.255.255.0
+修改MAC地址（需要先禁用网络适配器）
+未尝试那个0001不知道是啥 不敢轻举妄动
+reg add HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Class\\{{4d36e972-e325-11ce-bfc1-08002be10318}}\\0001 /v NetworkAddress /t REG_SZ /d  00-9A-CD-00-00-09 /f 
+
+netsh interface set interface "以太网 4" admin=disable
+powershell -Command Set-NetAdapter -Name '以太网 4' -MacAddress "00-9A-CD-00-00-06" -Confirm:$false
+netsh interface set interface "以太网 4" admin=enable
